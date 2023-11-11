@@ -12,7 +12,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp">
+        android:background="@drawable/background_rv_color"
+        android:padding="5dp">
 
         <ImageButton
             android:id="@+id/editBtn"
@@ -20,7 +21,6 @@
             android:layout_height="40dp"
             android:layout_marginStart="228dp"
             android:layout_marginTop="16dp"
-            android:backgroundTint="@color/white"
             android:src="@android:drawable/ic_menu_edit"
             app:layout_constraintEnd_toStartOf="@+id/deleteBtn"
             app:layout_constraintHorizontal_bias="1.0"
@@ -33,7 +33,6 @@
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="@color/white"
             android:src="@android:drawable/ic_menu_delete"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +44,6 @@
             android:layout_marginTop="64dp"
             android:text="Id"
             android:textSize="24sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +83,7 @@
             android:id="@+id/birthdateTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Birthdate"
+            android:text="Birthdate: "
             android:textSize="18sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"

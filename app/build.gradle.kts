@@ -9,12 +9,12 @@ android {
         viewBinding = true
     }
     namespace = "org.techtales.practical6studentinformation_crud_firestore"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "org.techtales.practical6studentinformation_crud_firestore"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
