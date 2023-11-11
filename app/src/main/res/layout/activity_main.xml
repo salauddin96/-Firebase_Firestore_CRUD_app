@@ -6,13 +6,166 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/cardView"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout1"
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Id"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/idEtxt"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout2"
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Name"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:endIconMode="clear_text"
+                app:layout_constraintTop_toBottomOf="@id/layout1" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameEtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout3"
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Email"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:endIconMode="clear_text"
+                app:layout_constraintTop_toBottomOf="@id/layout2" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEtxt"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout4"
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Subject"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:endIconMode="clear_text"
+                app:layout_constraintTop_toBottomOf="@id/layout3" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/subjectEtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout5"
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Birthday"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:endIconMode="clear_text"
+                app:layout_constraintTop_toBottomOf="@id/layout4" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/birthdateEtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/addBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FEFEFE"
+                android:text="ADD"
+                android:textColor="@color/black"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/layout5"
+                app:layout_constraintStart_toStartOf="@+id/layout5"
+                app:layout_constraintTop_toBottomOf="@+id/layout5"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/cardView" >
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            tools:listitem="@layout/list_items"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+
+
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
